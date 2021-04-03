@@ -1,3 +1,7 @@
 
 
 Using the sparkmax as a opencan device is simply down to creating a UDev rule. The device natively uses CANBridge. Which uses WPILib, only windows. I used Wireshark in-between a linux an a Windows host. Wireshark allowed me to capture the USB data between the sparkmax client and the sparkmax hardware. This method gave me the first glimpse of what we where playing with.
+
+The Spark Max will already work as a generic SocketCAN device, it just needs a udev rule (as well as the can/socketcan/gs_usb driver). Right now this udev rule works, but needs some improvement:
+
+ACTION=="add", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="a30e", RUN+="/sbin/modprobe gs_usb" RUN+="/bin/sh -c 'echo 0483 a30e ff > /sys/bus/usb/drivers/gs_usb/new_id'"
