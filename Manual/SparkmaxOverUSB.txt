@@ -1,0 +1,3 @@
+
+
+Using the sparkmax as a opencan device is simply down to creating a UDev rule. The device natively uses CANBridge. Which uses WPILib, only windows. I used Wireshark in-between a linux an a Windows host. Wireshark allowed me to capture the USB data between the sparkmax client and the sparkmax hardware. This method gave me the first glimpse of what we where playing with.

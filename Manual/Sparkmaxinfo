@@ -1,0 +1,8 @@
+#Sparkmax Hardware info#
+
+CHIP/ proccessor -  STM32F302
+
+datasheet - [Link](https://www.st.com/en/microcontrollers-microprocessors/stm32f302.html)
+
+
+can chip - Itmel 851 | ATA65060 | 1851DPJ
